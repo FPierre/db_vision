@@ -1,0 +1,33 @@
+p#notice = notice
+
+h1 Connectors
+
+table
+  thead
+    tr
+      th Title
+      th Adapter
+      th Database
+      th Username
+      th Password
+      th Host
+      th Port
+      th colspan='3'
+
+  tbody
+    - @connectors.each do |connector|
+      tr
+        td = connector.title
+        td = connector.adapter
+        td = connector.database
+        td = connector.username
+        td = connector.password
+        td = connector.host
+        td = connector.port
+        td = link_to 'Show', connector
+        td = link_to 'Edit', edit_connector_path(connector)
+        td = link_to 'Destroy', connector, method: :delete, data: { confirm: 'Are you sure?' }
+
+br
+
+= link_to 'New Connector', new_connector_path
