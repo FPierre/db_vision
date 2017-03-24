@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Connectors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Adapter</th>
+      <th>Database</th>
+      <th>Username</th>
+      <th>Password</th>
+      <th>Host</th>
+      <th>Port</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @connectors.each do |connector| %>
+      <tr>
+        <td><%= connector.title %></td>
+        <td><%= connector.adapter %></td>
+        <td><%= connector.database %></td>
+        <td><%= connector.username %></td>
+        <td><%= connector.password %></td>
+        <td><%= connector.host %></td>
+        <td><%= connector.port %></td>
+        <td><%= link_to 'Show', connector %></td>
+        <td><%= link_to 'Edit', edit_connector_path(connector) %></td>
+        <td><%= link_to 'Destroy', connector, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Connector', new_connector_path %>

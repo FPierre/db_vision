@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @connector.title %>
+</p>
+
+<p>
+  <strong>Adapter:</strong>
+  <%= @connector.adapter %>
+</p>
+
+<p>
+  <strong>Database:</strong>
+  <%= @connector.database %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @connector.username %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @connector.password %>
+</p>
+
+<p>
+  <strong>Host:</strong>
+  <%= @connector.host %>
+</p>
+
+<p>
+  <strong>Port:</strong>
+  <%= @connector.port %>
+</p>
+
+<%= link_to 'Edit', edit_connector_path(@connector) %> |
+<%= link_to 'Back', connectors_path %>
